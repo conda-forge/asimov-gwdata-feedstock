@@ -14,7 +14,7 @@ build:
     - gwdata = datafind.main:get_data
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -34,7 +34,7 @@ test:
     - datafind
   commands:
     - pip check
-    - gwdata --help
+    - cd tests && bash asimov-test-script.sh
   requires:
     - pip
 
