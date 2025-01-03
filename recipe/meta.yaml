@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 6790511dbbb26ea0a5c815fe37ae0cba3571a3b30312943f1e020ea3c88a244c
 
 build:
@@ -14,17 +14,17 @@ build:
     - gwdata = datafind.main:get_data
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools >=61.0
     - setuptools-scm >=3.4.3
     - wheel
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - gwosc
     - asimov >=0.4.0
     - pesummary
@@ -37,6 +37,7 @@ test:
     - cd tests && bash asimov-test-script.sh
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://git.ligo.org/asimov/pipelines/gwdata
