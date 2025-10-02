@@ -1,5 +1,5 @@
 {% set name = "asimov-gwdata" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 99aaf8d444ca5b2534b06cd25da5773343585d6508556593fa654ba33e0bff31
+  sha256: 3dce6f9c242880022e3a75cf754b860ce9685e31025778cca53a1faee1875ce5
 
 build:
   entry_points:
@@ -28,12 +28,12 @@ requirements:
     - gwosc
     - asimov >=0.4.0
     - pesummary
-	  - numpy
-	  - requests
-	  - click
-	  - igwn-auth-utils
-	  - requests-pelican
-	  - requests-scitokens >= 0.1.0
+	- numpy
+	 - requests
+	- click
+	- igwn-auth-utils
+	- requests-pelican
+	- requests-scitokens >= 0.1.0
 
 test:
   imports:
