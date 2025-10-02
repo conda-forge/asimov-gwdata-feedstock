@@ -33,7 +33,7 @@ requirements:
     - click
     - igwn-auth-utils
     - requests-pelican
-    - requests-scitokens >= 0.1.0
+    - requests-scitokens >=0.1.0
 
 test:
   imports:
