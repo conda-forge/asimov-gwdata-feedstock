@@ -1,5 +1,5 @@
 {% set name = "asimov-gwdata" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3dce6f9c242880022e3a75cf754b860ce9685e31025778cca53a1faee1875ce5
+  sha256: 0feb10778a790f0cf6ea3c194a0b1881524b2216f369c6ac3c27b94f496d8358
 
 build:
   entry_points:
